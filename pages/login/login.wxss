@@ -1,0 +1,55 @@
+.login {
+  padding: 14px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+}
+.login .login-title {
+  font-size: 28px;
+  margin-top: 10px;
+}
+.login .login-des {
+  font-size: 14px;
+  color: #909399;
+  margin-top: 10px;
+}
+.login .login-form {
+  margin-top: 20px;
+}
+.login .login-form .inp-lay {
+  height: 40px;
+  border-bottom: 1px solid #909399;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.login .login-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  background: #409eff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 40px;
+  text-align: center;
+}
+.login .login-to {
+  font-size: 14px;
+  color: #909399;
+  margin-top: 10px;
+}
+.login .login-to .to-color {
+  color: #409eff;
+}
+.login .login-bg {
+  position: absolute;
+  bottom: 14px;
+  width: calc(100% - 28px);
+  z-index: -1;
+  opacity: 0.6;
+}
+.login .login-bg .login-img {
+  width: 100%;
+}

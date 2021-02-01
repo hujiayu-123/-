@@ -1,0 +1,11 @@
+<view class="editinfo">
+  <view class="uploader">
+    <view class="uploader-lay">
+      <view class="uploader-label">头像</view>
+      <van-uploader file-list="{{ fileList }}" max-count="1" deletable="{{ true }}" bind:after-read="afterRead" bind:delete="deleteImg" />
+    </view>
+  </view>
+  <van-cell title="昵称" bindtap="handleToEditName" is-link value="{{name}}" />
+  <van-cell title="密码" bindtap="handleToEditPwd" is-link />
+  <view class="logout" bindtap="handleLogout">退 出</view>
+</view>

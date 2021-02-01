@@ -1,0 +1,47 @@
+.addbook .tip {
+  margin-left: 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #999999;
+}
+.addbook .van-cell__value,
+.addbook .van-cell__title {
+  color: #646566;
+}
+.addbook .uploader {
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+.addbook .uploader .uploader-lay {
+  border-top: 1px solid #ebedf0;
+  border-bottom: 1px solid #ebedf0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: #646566;
+  font-size: 16px;
+}
+.addbook .uploader .uploader-lay .van-uploader {
+  margin-top: 6px;
+}
+.addbook .uploader .red-req {
+  color: red;
+  margin-left: -5px;
+  margin-right: -4px;
+}
+.addbook .set-btn-lay {
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+.addbook .set-btn {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  background: #409eff;
+  color: #fff;
+  font-size: 17px;
+  margin-top: 20px;
+}

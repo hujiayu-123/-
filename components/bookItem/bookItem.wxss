@@ -1,0 +1,72 @@
+.c-booklist .listitem {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+.c-booklist .listitem:active {
+  background: #f0f0f0;
+}
+.c-booklist .item-img {
+  width: 60px;
+  height: 80px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+.c-booklist .item-info {
+  color: #999999;
+  font-size: 14px;
+  width: calc(100% - 80px);
+}
+.c-booklist .info-name {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.c-booklist .info-name .title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c-booklist .info-name .time {
+  font-size: 14px;
+  color: #999999;
+  flex-shrink: 0;
+}
+.c-booklist .info-content {
+  display: flex;
+  justify-content: space-between;
+}
+.c-booklist .content-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c-booklist .content-comment {
+  display: flex;
+  margin-left: 5px;
+}
+.c-booklist .comment-icon {
+  margin-right: 5px;
+}
+.c-booklist .right {
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}
+.c-booklist .right .edit {
+  background: #409eff;
+}
+.c-booklist .right .del {
+  background: #ee0a24;
+}
+.c-booklist .hidden {
+  display: none;
+}

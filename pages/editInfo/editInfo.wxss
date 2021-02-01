@@ -1,0 +1,34 @@
+.editinfo {
+  width: 100%;
+  height: 100vh;
+  background: #f0f0f0;
+}
+.editinfo .uploader {
+  padding: 0 14px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.editinfo .uploader .uploader-lay {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: #646566;
+  font-size: 16px;
+  border-bottom: 0.5px solid #ebedf0;
+}
+.editinfo .uploader .uploader-lay .van-uploader {
+  margin-top: 6px;
+}
+.editinfo .logout {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  text-align: center;
+  line-height: 40px;
+  color: #323233;
+  margin-top: 10px;
+}
+.editinfo .logout:active {
+  background: #f0f0f0;
+}

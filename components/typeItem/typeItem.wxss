@@ -1,0 +1,56 @@
+.c-typelist .listitem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.c-typelist .listitem:active {
+  background: #f0f0f0;
+}
+.c-typelist .type-txt {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c-typelist .type-txt .txt {
+  font-size: 18px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c-typelist .catalog {
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c-typelist .type-img {
+  width: 80px;
+  height: 100px;
+  flex-shrink: 0;
+}
+.c-typelist .type-img .img {
+  width: 100%;
+  height: 100%;
+}
+.c-typelist .right {
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}
+.c-typelist .right .edit {
+  background: #409eff;
+}
+.c-typelist .right .del {
+  background: #ee0a24;
+}
+.c-typelist .hidden {
+  display: none;
+}

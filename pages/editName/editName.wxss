@@ -1,0 +1,26 @@
+.editname .hr {
+  width: calc(100% - 28px);
+  margin: 0 auto;
+  height: 0.5px;
+  background: #f0f0f0;
+}
+.editname .tip {
+  font-size: 14px;
+  color: #c7c7c7;
+  margin-left: 13px;
+  margin-top: 5px;
+}
+.editname .btn {
+  width: calc(100% - 28px);
+  margin: 20px auto;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  background: #409eff;
+  color: #fff;
+  font-size: 17px;
+}
+.editname .hui {
+  opacity: 0.5;
+}

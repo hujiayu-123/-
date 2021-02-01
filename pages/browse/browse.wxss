@@ -1,0 +1,34 @@
+.collect .collect-top {
+  width: 100%;
+  height: 200px;
+  background: #409eff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 14px;
+}
+.collect .collect-top .title {
+  font-size: 28px;
+  color: #fff;
+}
+.collect .collect-top .collect-user {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+.collect .collect-top .collect-user .user-img {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.collect .collect-top .collect-user .user-img .img {
+  width: 100%;
+  height: 100%;
+}
+.collect .collect-top .collect-user .name {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}

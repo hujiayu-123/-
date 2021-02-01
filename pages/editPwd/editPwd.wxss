@@ -1,0 +1,19 @@
+.editpwd .tip {
+  font-size: 13px;
+  color: #c7c7c7;
+  margin: 14px;
+}
+.editpwd .btn {
+  width: calc(100% - 28px);
+  margin: 20px auto;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  background: #409eff;
+  color: #fff;
+  font-size: 17px;
+}
+.editpwd .hui {
+  opacity: 0.5;
+}

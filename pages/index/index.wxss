@@ -1,21 +1,44 @@
 /**index.wxss**/
-.userinfo {
+.index .search-lay {
+  padding: 14px;
+}
+.index .search {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #bbbbbb;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.index .search-img {
+  width: 25px;
+  margin: 0 20px;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.index .search-txt {
+  color: #bbbbbb;
 }
-
-.usermotto {
-  margin-top: 200px;
+.index .swiper {
+  padding: 0 14px;
+}
+.index .sw-item {
+  width: 100%;
+}
+.index .sw-img {
+  width: 100%;
+  border-radius: 20px;
+}
+.index .tab {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.index .tab-item {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 40px;
+}
+.index .tab-active {
+  color: #298cf6;
 }

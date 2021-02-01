@@ -34,6 +34,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    editInfo: null,
+    isRole: false,
+    isPreViewApi: false
   }
 })

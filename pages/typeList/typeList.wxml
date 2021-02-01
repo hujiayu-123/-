@@ -1,0 +1,10 @@
+<scroll-view class="typelist scroll" scroll-y="true" lower-threshold="80" bindscrolltolower="handleBottom">
+  <van-search background="#fff" class="searchinp" value="{{ keywords }}" placeholder="请输入搜索关键词" bind:search="handleSearch" />
+  <view class="list">
+    <typeItem bind:update="handleUpdateType" wx:for="{{typeList}}" wx:key="sid" bind:click="handleToBack" listitem="{{item}}"></typeItem>
+    <van-empty wx:if="{{typeList.length == 0}}" description="空空如也" />
+  </view>
+  <view class="add" bindtap="handleToAddTyle">
+    <van-icon name="plus" class="icon" />
+  </view>
+</scroll-view>

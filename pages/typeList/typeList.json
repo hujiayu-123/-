@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "图书分类",
+  "usingComponents": {
+    "typeItem": "../../components/typeItem/typeItem"
+  }
+}

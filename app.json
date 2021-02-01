@@ -1,14 +1,62 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/mine/mine",
+    "pages/set/set",
+    "pages/search/search",
+    "pages/bookList/bookList",
+    "pages/detail/detail",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/typeList/typeList",
+    "pages/addBook/addBook",
+    "pages/addType/addType",
+    "pages/collect/collect",
+    "pages/browse/browse",
+    "pages/editInfo/editInfo",
+    "pages/editPwd/editPwd",
+    "pages/editName/editName"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "阅读推广",
     "navigationBarTextStyle":"black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "selectedColor": "#298CF6",
+    "backgroundColor": "#f0f0f0",
+    "color": "#909399",
+    "list": [
+      {
+        "pagePath": "pages/set/set",
+        "text": "管理",
+        "iconPath": "./assets/set-h.png",
+        "selectedIconPath": "./assets/set.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "书城",
+        "iconPath": "./assets/book-h.png",
+        "selectedIconPath": "./assets/book.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./assets/my-h.png",
+        "selectedIconPath": "./assets/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-icon": "@vant/weapp/icon/index"
+  }
 }

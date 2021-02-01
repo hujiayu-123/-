@@ -1,0 +1,22 @@
+<view class="addbook">
+  <view class="set-lay">
+    <view class="tip">请录入图书信息</view>
+    <van-field value="{{ formValue.title }}" bind:change="handleInput" data-name="title" required clearable label="书名" placeholder="请输入书名" />
+    <van-field value="{{ formValue.auther }}" required bind:change="handleInput" data-name="auther" clearable label="作者" placeholder="请输入作者" />
+    <van-cell placeholder="请选择图书分类" required title="图书分类" bindtap="handleToTypeList" is-link value="{{formValue.catalog}}" />
+    <van-field required value="{{ formValue.content }}" label="精选内容" bind:change="handleInput" data-name="content" type="textarea" rows="5" placeholder="请输入内容" autosize border="{{ false }}" />
+    <view class="uploader">
+      <view class="uploader-lay">
+        <view class="uploader-label">
+          <text class="red-req">*</text>
+          封面上传
+        </view>
+        <van-uploader file-list="{{ fileList }}" max-count="1" deletable="{{ true }}" bind:after-read="afterRead" bind:delete="deleteImg" />
+      </view>
+    </view>
+    <van-field value="{{ formValue.link }}" bind:change="handleInput" data-name="link" clearable label="原文链接" placeholder="请输入原文链接（可选）" />
+    <view class="set-btn-lay">
+      <view class="set-btn" bindtap="handleSubmit">{{btnTtx}}</view>
+    </view>
+  </view>
+</view>

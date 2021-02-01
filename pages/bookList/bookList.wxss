@@ -1,0 +1,8 @@
+.booklist .van-search {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.booklist .list {
+  margin-top: 60px;
+}

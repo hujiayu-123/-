@@ -1,0 +1,7 @@
+<scroll-view class="booklist scroll" scroll-y="true" lower-threshold="80" bindscrolltolower="handleBottom">
+  <van-search background="#fff" value="{{ keyword }}" placeholder="请输入搜索关键词" class="searchinp" bind:search="handleSearch" />
+  <view class="list">
+    <bookItem bind:update="handleUpdateBook" wx:for="{{bookList}}" wx:key="tid" listitem="{{item}}"></bookItem>
+    <van-empty wx:if="{{bookList.length == 0}}" description="空空如也" />
+  </view>
+</scroll-view>

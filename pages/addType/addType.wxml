@@ -1,0 +1,16 @@
+<view class="addtype">
+  <view class="tip">请录入图书分类信息</view>
+  <van-field value="{{ formValue.catalog }}" bind:change="handleInput" data-name="catalog" required clearable label="图书分类" placeholder="请输入分类名称" />
+  <view class="uploader">
+    <view class="uploader-lay">
+      <view class="uploader-label">
+        <text class="red-req">*</text>
+        封面上传
+      </view>
+      <van-uploader file-list="{{ fileList }}" max-count="1" deletable="{{ true }}" bind:after-read="afterRead" bind:delete="deleteImg" />
+    </view>
+  </view>
+  <view class="type-btn-lay">
+    <view class="type-btn" bindtap="handleSubmit">{{btnTtx}}</view>
+  </view>
+</view>

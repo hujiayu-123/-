@@ -1,0 +1,81 @@
+.mine .mine-user {
+  width: 100%;
+  height: 200px;
+  background: #409eff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.mine .mine-user .user-img {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.mine .mine-user .user-img .img {
+  width: 100%;
+  height: 100%;
+}
+.mine .mine-user .user-name {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.mine .mine-set .set-item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14px;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+.mine .mine-set .set-item:active {
+  background: #f0f0f0;
+}
+.mine .mine-set .set-item .set-img {
+  width: 20px;
+  vertical-align: bottom;
+}
+.mine .weixin {
+  padding: 0 16px;
+  line-height: normal;
+  background: #fff;
+  color: #323233;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.mine .weixin::after {
+  border: 0;
+}
+.mine .weixin .weixin-lay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.mine .weixin .weixin-lay .right {
+  display: flex;
+}
+.mine .weixin .weixin-lay:after {
+  position: absolute;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  content: ' ';
+  pointer-events: none;
+  right: 16px;
+  bottom: 0;
+  left: 16px;
+  border-bottom: 1px solid #ebedf0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.mine .weixin .weixin-lay .icon {
+  color: #969799;
+  margin-left: 5px;
+}

@@ -1,0 +1,141 @@
+.detail .info {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+.detail .info-info {
+  display: flex;
+  justify-content: space-between;
+}
+.detail .info-img {
+  width: 100px;
+  height: 130px;
+  flex-shrink: 0;
+}
+.detail .info-img .img {
+  width: 100%;
+  height: 100%;
+}
+.detail .info-info {
+  margin-left: 15px;
+  width: 100%;
+}
+.detail .info-txt {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detail .info-info .title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.detail .type {
+  margin-bottom: 10px;
+}
+.detail .look {
+  margin-left: 10px;
+}
+.detail .comment {
+  color: #999999;
+  font-size: 14px;
+}
+.detail .info-collect .icon {
+  color: #999999;
+}
+.detail .info-collect .icon-a {
+  color: #d80000;
+}
+.detail .link {
+  padding: 14px;
+  padding-bottom: 0;
+  color: #d80000;
+}
+.detail .content {
+  padding: 14px;
+}
+.detail .comment-list {
+  padding: 0 14px;
+  margin-bottom: 64px;
+}
+.detail .comment-list .list-item {
+  background: #f0f0f0;
+  padding: 14px;
+  display: flex;
+}
+.detail .comment-list .list-item .item-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.detail .comment-list .list-item .item-img .img {
+  width: 100%;
+  height: 100%;
+}
+.detail .comment-list .list-item .c-info {
+  width: calc(100% - 65px);
+}
+.detail .comment-list .list-item .c-info .user-info {
+  display: flex;
+  justify-content: space-between;
+}
+.detail .comment-list .list-item .c-info .user-info .name {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detail .comment-list .list-item .c-info .user-info .time {
+  font-size: 13px;
+  color: #b2b2b2;
+  flex-shrink: 0;
+}
+.detail .comment-list .list-item .c-info .comment-info {
+  color: #666666;
+  margin-top: 10px;
+}
+.detail .send-comment {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+.detail .send-comment .left {
+  width: calc(100% - 70px);
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.detail .send-comment .left .input {
+  background: #fff;
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  padding: 0 14px;
+}
+.detail .send-btn {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 6px;
+  border: 1px solid #c0c0c0;
+  text-align: center;
+  color: #c0c0c0;
+}
+.detail .send-btn-a {
+  background: #409eff;
+  border: 1px solid #409eff;
+  color: #fff;
+}

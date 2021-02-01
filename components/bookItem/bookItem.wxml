@@ -1,0 +1,27 @@
+<view class="c-booklist">
+  <van-swipe-cell right-width="{{ isRole? 80 : 0 }}">
+    <van-cell-group>
+      <view class="listitem" bindtap="handleClick" data-id="{{listitem.tid}}">
+        <image class="item-img" lazy-load="true" src="{{listitem.artpic?listitem.artpic:'../../assets/book-pic.png'}}" lazy-load="false"></image>
+        <view class="item-info">
+          <view class="info-name">
+            <view class="title">{{listitem.title}}</view>
+            <view class="time" wx:if="{{listitem.updated}}">{{listitem.updated}}</view>
+          </view>
+          <view class="info-author">{{listitem.auther}}</view>
+          <view class="info-content">
+            <view class="content-txt">{{listitem.content}}</view>
+            <view class="content-comment">
+              <van-icon class="comment-icon" name="chat-o" size="20" />
+              <view>{{listitem.answer}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-cell-group>
+    <view slot="right" class="{{isRole? 'right' : 'right hidden'}}">
+      <view class="edit" bindtap="handleEdit" data-item="{{listitem}}">编 辑</view>
+      <view class="del" bindtap="handleDel" data-id="{{listitem.tid}}">删 除</view>
+    </view>
+  </van-swipe-cell>
+</view>

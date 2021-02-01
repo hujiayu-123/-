@@ -1,13 +1,38 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!-- index.wxml -->
+<scroll-view class="scroll index" scroll-y="true" lower-threshold="80" bindscrolltolower="handleBottom">
+  <view class="search-lay">
+    <view class="search">
+      <image class="search-img" mode="widthFix" src="../../assets/search.png"></image>
+      <text bindtap="handleToSearch" class="search-txt">点击去搜索</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="swiper">
+    <swiper autoplay="true" circular="true" interval="3000" duration="500">
+      <swiper-item class="sw-item">
+        <image class="sw-img" src="../../assets/banner.jpg" mode="widthFix" lazy-load="false"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class="sw-img" src="../../assets/banner.jpg" mode="widthFix" lazy-load="false"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class="sw-img" src="../../assets/banner.jpg" mode="widthFix" lazy-load="false"></image>
+      </swiper-item>
+    </swiper>
   </view>
-</view>
+  <view class="tab">
+    <view class="{{isActive==='recommend'?'tab-active tab-item' : 'tab-item'}}" data-id="recommend" bindtap="handleTabChange">
+      推荐
+    </view>
+    <view class="{{isActive==='classification'?'tab-active tab-item':'tab-item'}}" data-id="classification" bindtap="handleTabChange">
+      分类
+    </view>
+  </view>
+  <view class="content">
+    <view class="" wx-if="{{isActive==='recommend'}}">
+      <bookItem bind:update="handleUpdateBook" wx:for="{{bookList}}" wx:key="tid" data-id="{{item.tid}}" listitem="{{item}}"></bookItem>
+    </view>
+    <view class="" wx-if="{{isActive==='classification'}}">
+      <typeItem bind:update="handleUpdateType" wx:for="{{typeList}}" wx:key="sid" bind:click="handleToList" listitem="{{item}}"></typeItem>
+    </view>
+  </view>
+</scroll-view>

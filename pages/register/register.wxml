@@ -1,0 +1,28 @@
+<view class="register">
+  <view class="register-inp">
+    <view class="register-title">欢迎使用阅读推广</view>
+    <view class="register-des">祝您使用愉快！</view>
+    <view class="register-form">
+      <view class="label">手机号</view>
+      <view class="inp-lay">
+        <input type="number" data-name="mobile" bindinput="handleInput" placeholder="请输入手机号" />
+      </view>
+      <view class="label">设置密码</view>
+      <view class="inp-lay">
+        <input password type="text" data-name="password" bindinput="handleInput" placeholder="请输入密码" />
+      </view>
+      <view class="inp-lay ver-code">
+        <view class="ver-inp">
+          <input data-name="code" bindinput="handleInput" placeholder="请输入验证码" type="number" />
+        </view>
+        <view bindtap="{{isVerCode?'':'handleCode'}}" class="{{isVerCode?'ver-btn mask':'ver-btn'}}">
+          {{isVerCode?second+'s后重新获取':'获取验证码'}}
+        </view>
+      </view>
+      <view class="register-btn" bindtap="handleRegister">注 册</view>
+    </view>
+  </view>
+  <view class="register-bg">
+    <image class="register-img" src="../../assets/logo.png" mode="widthFix"></image>
+  </view>
+</view>

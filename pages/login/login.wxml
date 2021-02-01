@@ -1,0 +1,24 @@
+<view class="login">
+  <view class="login-inp">
+    <view class="login-title">登录阅读推广</view>
+    <view class="login-des">如没有注册账号，请先进行账号注册</view>
+    <view class="login-form">
+      <view class="label">手机号</view>
+      <view class="inp-lay">
+        <input type="number" data-name="mobile" bindinput="handleInput" placeholder="请输入手机号" />
+      </view>
+      <view class="label">密码</view>
+      <view class="inp-lay">
+        <input password type="text" data-name="password" bindinput="handleInput" placeholder="请输入密码" />
+      </view>
+      <view class="login-btn" bindtap="handleLogin">登 录</view>
+      <view class="login-to">
+        还没有账号？
+        <text class="to-color" bindtap="handleToRegister">立即注册</text>
+      </view>
+    </view>
+  </view>
+  <view class="login-bg">
+    <image class="login-img" src="../../assets/logo.png" mode="widthFix"></image>
+  </view>
+</view>

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "bookItem": "../../components/bookItem/bookItem",
+    "typeItem": "../../components/typeItem/typeItem"
+  }
 }

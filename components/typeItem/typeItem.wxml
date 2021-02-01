@@ -1,0 +1,23 @@
+<view class="c-typelist">
+  <van-swipe-cell right-width="{{ isRole? 80 : 0 }}">
+    <van-cell-group>
+      <view class="listitem" bindtap="handleClick" data-id="{{listitem}}">
+        <view class="type-txt">
+          <view class="txt">{{listitem.catalog}}</view>
+          <view wx:if="{{listitem.sort[0] != null}}">
+            <view class="catalog" wx:for="{{listitem.sort}}" wx:key="item">
+              {{index+1}}. {{item}}
+            </view>
+          </view>
+        </view>
+        <view class="type-img">
+          <image class="img" src="{{listitem.catapic ? listitem.catapic : '../../assets/logo.png'}}"></image>
+        </view>
+      </view>
+    </van-cell-group>
+    <view slot="right" class="{{isRole? 'right' : 'right hidden'}}">
+      <view class="edit" bindtap="handleEdit" data-item="{{listitem}}">编 辑</view>
+      <view class="del" bindtap="handleDel" data-id="{{listitem.sid}}">删 除</view>
+    </view>
+  </van-swipe-cell>
+</view>

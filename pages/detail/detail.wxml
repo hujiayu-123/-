@@ -1,0 +1,48 @@
+<view class="detail">
+  <view class="info">
+    <view class="info-img">
+      <image class="img" src="{{detail.artpic ? detail.artpic:'../../assets/book-pic.png'}}"></image>
+    </view>
+    <view class="info-info">
+      <view class="info-txt">
+        <view class="title">{{detail.title}}</view>
+        <view class="type">{{detail.catalog}}</view>
+        <view class="comment">{{detail.author ? detail.author : '暂无'}}</view>
+        <view class="comment">
+          <text>{{detail.comment}}人评论</text>
+          <text class="look">{{detail.readnum}}人看过</text>
+        </view>
+      </view>
+      <view class="info-collect">
+        <van-icon bindtap="handleIsCollect" name="like" class="{{isCollect ? 'icon-a' : 'icon'}}" size="30" />
+      </view>
+    </view>
+  </view>
+  <view class="link" wx:if="{{detail.link}}">
+    原文链接：
+    <text selectable="true">{{detail.link}}</text>
+  </view>
+  <view class="content">
+    <text selectable="true">{{detail.content}}</text>
+  </view>
+  <view class="comment-list">
+    <view class="list-item" wx:for="{{commentList}}" wx:key="index">
+      <view class="item-img">
+        <image class="img" src="{{item.cuid.avater ? item.cuid.avater : '../../assets/top-pic.png'}}"></image>
+      </view>
+      <view class="c-info">
+        <view class="user-info">
+          <view class="name">{{item.cuid.name ? item.cuid.name : '昵称'}}</view>
+          <view class="time">{{item.created}}</view>
+        </view>
+        <view class="comment-info">{{item.retext}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="send-comment">
+    <view class="left">
+      <input class="input" focus="{{focus}}" placeholder="评论" bindconfirm="handleSend" bind:input="handleIpnut" value="{{ comment }}" />
+    </view>
+    <view class="{{isValue ? 'send-btn-a send-btn' : 'send-btn'}}" bindtap="handleSend">发送</view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="set">
+  <view class="no-role" wx:if="{{isSet}}">
+    <image class="img" src="../../assets/no_data.png" mode="aspectFit" lazy-load="false"></image>
+    <view class="no-data-txt">您没有权限访问，去看看别的吧 ~~~</view>
+  </view>
+  <view wx:else>
+    <van-cell title="添加图书" bindtap="handleToAddBook" is-link />
+    <van-cell title="添加分类" bindtap="handleToAddType" is-link />
+  </view>
+</view>

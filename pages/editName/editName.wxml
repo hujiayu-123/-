@@ -1,0 +1,7 @@
+<view class="editname">
+  <van-field value="{{ name }}" placeholder="请输入昵称" bind:input="handleInput" />
+  <view class="tip">好的名字可以让你的朋友记住你</view>
+  <view class="{{isActive ? 'btn' : 'btn hui'}}" bindtap="{{isActive ? 'handleSubmit' : ''}}">
+    保 存
+  </view>
+</view>

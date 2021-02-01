@@ -1,0 +1,9 @@
+<view class="editpwd">
+  <view class="tip">请设置密码，您可以用账号设置，更快捷，不容易忘记</view>
+  <van-field value="{{ usedPwd }}" type="password" label="原密码" bind:input="handleInput" data-name="usedPwd" placeholder="请输入原密码" />
+  <van-field value="{{ newPwd }}" type="password" label="新密码" bind:input="handleInput" data-name="newPwd" placeholder="请输入新密码" />
+  <van-field value="{{ okPwd }}" type="password" label="确认密码" error-message="{{errMsg}}" bind:input="handleInput" data-name="okPwd" placeholder="请输入确认密码" />
+  <view class="{{isActive ? 'btn' : 'btn hui'}}" bindtap="{{isActive ? 'handleSubmit' : ''}}">
+    保 存
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="collect">
+  <view class="collect-top">
+    <view class="title">浏览记录</view>
+    <view class="collect-user">
+      <view class="user-img">
+        <image class="img" src="{{userInfo.avater ? userInfo.avater : '../../assets/top-pic.png'}}"></image>
+      </view>
+      <view class="name">{{userInfo.name ? userInfo.name : '昵称'}}</view>
+    </view>
+  </view>
+  <bookItem bind:update="handleUpdateBook" wx:for="{{bookList}}" wx:key="tid" listitem="{{item}}"></bookItem>
+  <van-empty wx:if="{{bookList.length == 0}}" description="暂无浏览记录" />
+</view>

@@ -1,0 +1,22 @@
+<view class="mine">
+  <view class="mine-user">
+    <view class="user-img">
+      <image class="img" src="{{userinfo.avater ? userinfo.avater : '../../assets/top-pic.png'}}"></image>
+    </view>
+    <view class="user-name">{{userinfo.name? userinfo.name : '昵称'}}</view>
+  </view>
+  <view class="mine-set">
+    <button class="weixin" bindgetuserinfo="getUserInfo" open-type="getUserInfo">
+      <view class="weixin-lay">
+        <view>绑定微信</view>
+        <view class="right">
+          <view class="icon">{{userInfo.nickName ? userInfo.nickName : '去授权'}}</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+    </button>
+    <van-cell title="我的收藏" bindtap="handleToCollect" is-link />
+    <van-cell title="浏览记录" bindtap="handleToBrowsing" is-link />
+    <van-cell title="设置" bindtap="handleToSet" is-link />
+  </view>
+</view>
