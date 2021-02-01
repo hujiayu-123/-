@@ -59,5 +59,14 @@ Page({
     wx.navigateTo({
       url: `/pages/addType/addType`,
     })
+  },
+  // 跳转未开发页面
+  handleToNew() {
+    wx.showToast({
+      title: '功能还未开发，敬请期待',
+      icon: 'none',
+      duration: 2000,
+      mask: 'true'
+    })
   }
 })
