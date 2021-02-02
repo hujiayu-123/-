@@ -46,6 +46,10 @@
   color: #323233;
   font-size: 16px;
   box-sizing: border-box;
+  border-radius: 0;
+}
+.mine .weixin:active {
+  background: #f0f0f0;
 }
 .mine .weixin::after {
   border: 0;
@@ -55,7 +59,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 0;
+  padding: 13px 0;
   box-sizing: border-box;
 }
 .mine .weixin .weixin-lay .right {
