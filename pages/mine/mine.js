@@ -19,6 +19,7 @@ Page({
     wx.getStorage({
       key: 'userInfo',
       success: function(res) {
+        console.log(JSON.parse(res.data))
         _this.setData({
           userinfo: JSON.parse(res.data)
         })
@@ -44,9 +45,13 @@ Page({
     })
   },
   getUserInfo() {
+    let _this = this
     wx.getUserInfo({
       success: function(res) {
         app.globalData.userInfo = res.userInfo
+        _this.setData({
+          userInfo: res.userInfo
+        })
       }
     })
   },
