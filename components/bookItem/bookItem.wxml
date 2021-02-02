@@ -2,7 +2,7 @@
   <van-swipe-cell right-width="{{ isRole? 80 : 0 }}">
     <van-cell-group>
       <view class="listitem" bindtap="handleClick" data-id="{{listitem.tid}}">
-        <image class="item-img" lazy-load="true" src="{{listitem.artpic?listitem.artpic:'../../assets/book-pic.png'}}" lazy-load="false"></image>
+        <image class="item-img" lazy-load="true" src="{{listitem.artpic?listitem.artpic:'../../assets/book-pic.png'}}"></image>
         <view class="item-info">
           <view class="info-name">
             <view class="title">{{listitem.title}}</view>

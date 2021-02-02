@@ -1,25 +1,40 @@
-import {urls} from './api'
-const app = getApp()
+import {urls,host} from './api'
+
 const exceptionAddrArr = [
-  'https://37k09696v7.goho.co/login/login',
-  'https://37k09696v7.goho.co/register/reg',
-  'https://37k09696v7.goho.co/list/list',
-  'https://37k09696v7.goho.co/list/cata',
-  'https://37k09696v7.goho.co/register/code',
-  'https://37k09696v7.goho.co/list/detail',
-  'https://37k09696v7.goho.co/list/comments'
+   host + '/login/login',
+   host + '/register/reg',
+   host + '/list/list',
+   host + '/list/cata',
+   host + '/register/code',
+   host + '/list/detail',
+   host + '/list/comments'
   
 ]
-const loginApi = "https://37k09696v7.goho.co/login/login"
+const loginApi = host + "/login/login"
 
 function createToken(url) {
   let header = { 'content-type': 'application/json' }
   return new Promise((resolve,reject) => {
     if (exceptionAddrArr.indexOf(url) == -1) {  //排除请求的地址不需要token的地址
-      console.log(url)
+      let expiration=wx.getStorageSync("expiration");//拿到过期时间
+      var timestamp=Date.parse(new Date());//拿到现在时间
+      if(expiration<timestamp){//过期了，清空缓存，跳转到登录
+        wx.clearStorageSync();//清空缓存
+        wx.showToast({
+          title: '用户信息过期，请重新登录',
+          icon: 'none',
+          duration: 2000,
+          mask: 'true'
+        })
+        wx.redirectTo({
+          url: '/pages/login/login'
+        })
+        return
+      }
         wx.getStorageInfo({  
           success(res) {
             if(res.keys.indexOf("token") != -1){
+
               wx.getStorage({
                 key: 'token',
                 success: function (res) {
@@ -84,7 +99,6 @@ const service = {
               mask: 'true'
             })
             reject(err)
-            app.globalData.txt = JSON.stringify(err)
           }
         })
       })
@@ -105,6 +119,12 @@ const service = {
           timeout: 5000,
           success: (res) =>{
             if(url === loginApi) {
+              var timestamp=Date.parse(new Date())
+              var expiration = timestamp + 86400000
+              wx.setStorage({
+                key: 'expiration',
+                data: expiration
+              })
               wx.setStorage({
                 key: 'token',
                 data: res.data.token

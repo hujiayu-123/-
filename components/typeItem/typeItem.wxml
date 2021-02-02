@@ -11,7 +11,7 @@
           </view>
         </view>
         <view class="type-img">
-          <image class="img" src="{{listitem.catapic ? listitem.catapic : '../../assets/logo.png'}}"></image>
+          <image class="img" lazy-load="true" mode="aspectFit" src="{{listitem.catapic ? listitem.catapic : '../../assets/logo.png'}}"></image>
         </view>
       </view>
     </van-cell-group>

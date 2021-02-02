@@ -54,17 +54,8 @@ Page({
     wx.getStorageInfo({    
       success(res) {
         if(res.keys.indexOf("token") == -1){
-          wx.showModal({
-            title: '提示',
-            content: '您还没有登录,请先登录再来查看吧！',
-            showCancel: false,
-            success(res) {
-              if (res.confirm) {
-                wx.reLaunch({
-                  url: '/pages/login/login',
-                })
-              }
-            }
+          wx.reLaunch({
+            url: '/pages/login/login',
           })
         }
       },

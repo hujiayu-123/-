@@ -12,10 +12,10 @@
         <image class="sw-img" src="../../assets/banner.jpg" mode="widthFix" lazy-load="false"></image>
       </swiper-item>
       <swiper-item>
-        <image class="sw-img" src="../../assets/banner.jpg" mode="widthFix" lazy-load="false"></image>
+        <image class="sw-img" src="../../assets/banner1.jpg" mode="widthFix" lazy-load="false"></image>
       </swiper-item>
       <swiper-item>
-        <image class="sw-img" src="../../assets/banner.jpg" mode="widthFix" lazy-load="false"></image>
+        <image class="sw-img" src="../../assets/banner2.jpg" mode="widthFix" lazy-load="false"></image>
       </swiper-item>
     </swiper>
   </view>
@@ -30,9 +30,11 @@
   <view class="content">
     <view class="" wx-if="{{isActive==='recommend'}}">
       <bookItem bind:update="handleUpdateBook" wx:for="{{bookList}}" wx:key="tid" data-id="{{item.tid}}" listitem="{{item}}"></bookItem>
+      <van-empty wx:if="{{bookList.length == 0}}" description="空空如也" />
     </view>
     <view class="" wx-if="{{isActive==='classification'}}">
       <typeItem bind:update="handleUpdateType" wx:for="{{typeList}}" wx:key="sid" bind:click="handleToList" listitem="{{item}}"></typeItem>
+      <van-empty wx:if="{{typeList.length == 0}}" description="空空如也" />
     </view>
   </view>
 </scroll-view>

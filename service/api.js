@@ -1,4 +1,4 @@
-export const host = 'https://37k09696v7.goho.co'
+export const host = 'https://3g7096967c.qicp.vip'
 
 export const urls = {
   login: host + '/login/login',// 登录

@@ -1,7 +1,7 @@
 <view class="mine">
   <view class="mine-user">
     <view class="user-img">
-      <image class="img" src="{{userinfo.avater ? userinfo.avater : '../../assets/top-pic.png'}}"></image>
+      <image class="img" mode="aspectFill" src="{{userinfo.avater ? userinfo.avater : '../../assets/top-pic.png'}}"></image>
     </view>
     <view class="user-name">{{userinfo.name? userinfo.name : '昵称'}}</view>
   </view>
