@@ -66,12 +66,13 @@ Page({
           this.setData({
             bookList:res.data
           })
+        }else {
+          bookList.push(...res.data)
+          console.log(bookList)
+          this.setData({
+            bookList
+          })
         }
-      }else {
-        bookList.push(...res.data)
-        this.setData({
-          bookList
-        })
       }
     })
   },
